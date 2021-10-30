@@ -1,0 +1,35 @@
+{
+  "name": "github-actions-simple-ci-cd-nodejs-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilanindita/github-actions-simple-ci-cd-nodejs-app.git"
+  },
+  "keywords": [
+    "github",
+    "actions"
+  ],
+  "author": "Kamil Anindita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamilanindita/github-actions-simple-ci-cd-nodejs-app/issues"
+  },
+  "homepage": "https://github.com/kamilanindita/github-actions-simple-ci-cd-nodejs-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "http-status": "^1.5.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "supertest": "^6.1.6"
+  }
+}
