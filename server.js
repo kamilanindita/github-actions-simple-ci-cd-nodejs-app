@@ -22,10 +22,11 @@ app.get('/hello/:name', (req,res) => {
 
 
 const server = http.createServer(app)
+const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-    console.log(`This app running on port:${PORT}`)
+server.listen(PORT, HOSTNAME, () => {
+    console.log(`This app running on ${HOSTNAME}:${PORT}`)
 });
 
 module.exports = app
