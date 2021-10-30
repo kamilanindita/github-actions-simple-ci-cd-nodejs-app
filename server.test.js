@@ -31,4 +31,14 @@ describe('GET /city:name', () => {
         expect(res.body.data).toBe('Welcome to Jogja !')
     })
 });
+
+describe('GET /email:email', () => {
+    it('can get email endpoint with email parameter kamilanindita@gmail.com', async () => {
+        const res = await supertest(app)
+            .get('/email/kamilanindita@gmail.com')
+            .expect(httpStatus.OK)
+
+        expect(res.body.data).toBe('My email address is kamilanindita@gmail.com')
+    })
+});
   

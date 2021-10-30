@@ -27,6 +27,13 @@ app.get('/city/:name', (req,res) => {
     });
 })
 
+app.get('/email/:email', (req,res) => {
+    res.status(httpStatus.OK).json({
+        message: 'OK',
+        data: `My email address is ${req.params.email}`
+    });
+})
+
 
 const server = http.createServer(app)
 const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
