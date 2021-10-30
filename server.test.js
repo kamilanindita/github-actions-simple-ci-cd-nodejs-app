@@ -21,4 +21,14 @@ describe('GET /hello:name', () => {
         expect(res.body.data).toBe('Hello, Kamil !')
     })
 });
+
+describe('GET /city:name', () => {
+    it('can get city endpoint with city parameter Jogja', async () => {
+        const res = await supertest(app)
+            .get('/city/Jogja')
+            .expect(httpStatus.OK)
+
+        expect(res.body.data).toBe('Welcome to Jogja !')
+    })
+});
   
