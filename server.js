@@ -20,6 +20,13 @@ app.get('/hello/:name', (req,res) => {
     });
 })
 
+app.get('/city/:name', (req,res) => {
+    res.status(httpStatus.OK).json({
+        message: 'OK',
+        data: `Welcome to ${req.params.name} !`
+    });
+})
+
 
 const server = http.createServer(app)
 const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
